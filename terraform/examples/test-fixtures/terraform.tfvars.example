@@ -1,0 +1,15 @@
+# Bill Shock Guard - Test Fixtures Configuration
+# WARNING: Enabling these creates deliberately idle AWS resources that incur costs!
+# Only toggle the specific resources you wish to test, and destroy immediately after.
+
+aws_region  = "us-east-1"
+name_prefix = "bsg-fixture"
+
+# Cheap fixtures (< $0.02/day):
+create_eip = true   # ~$0.005/hr
+create_ebs = true   # ~$0.08/month
+create_ec2 = false  # ~$0.0104/hr
+
+# Expensive fixtures (Costs > $0.50/day):
+create_nat = false  # ~$0.045/hr (~$32.40/month)
+create_alb = false  # ~$0.0225/hr (~$16.20/month)

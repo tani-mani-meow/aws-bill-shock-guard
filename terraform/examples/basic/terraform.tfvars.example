@@ -1,0 +1,8 @@
+# Bill Shock Guard - Basic Example Variables
+# Copy to terraform.tfvars and customize.
+
+aws_region          = "us-east-1"
+notification_emails = ["student@example.com"]
+dry_run             = true
+enabled_actions     = ["ec2_stop", "eip_release"]
+name_prefix         = "bsg"
